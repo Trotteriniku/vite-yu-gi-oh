@@ -15,12 +15,15 @@ import HeaderComponent from './components/HeaderComponent.vue';
       }
     },
     methods:{
-
-    },
+      getCards(){
+        axios.get(store.apiUrl+store.endPoint.name).then((response) =>{
+        store.cardList = response.data.results;
+      })
+      },
     created(){
-
+      this.getCards();
     }
-
+    }
   }
 </script>
 
