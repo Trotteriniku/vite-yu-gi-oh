@@ -1,9 +1,14 @@
 <template>
   <HeaderComponent/>
-  <CardsListComponent/>
+  <main class="p-5">
+    <div class="container bg-light p-5 rounded">
+      <CardsListComponent/> 
+    </div>
+  </main>
 </template>
 
 <script>
+import axios from 'axios'
 import { store } from './data/store'
 import HeaderComponent from './components/HeaderComponent.vue';
 import CardsListComponent from './components/CardsListComponent.vue';
@@ -24,14 +29,17 @@ import CardsListComponent from './components/CardsListComponent.vue';
         store.cardsList = response.data.data;
         console.log(data);
       })
-      },
+      }
+    },
     created(){
       this.getCards();
-    }
     }
   }
 </script>
 
 <style lang="scss" scoped>
-
+    main{
+      background-color: orange;
+      
+    }
 </style>

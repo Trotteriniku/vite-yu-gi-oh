@@ -1,12 +1,12 @@
 <template>
-    <div class="row pt-5" >
+    <div class=" row row-cols-lg-5 row-cols-md-4 " >
         <CardComponent
         v-for="card in store.cardsList"
          :name="card.name"
          :type="card.type"
          :frameType="card.frameType"
          :archetype="card.archetype"
-         :card_images="card.card_images.image_url"
+         :card_images="card.card_images[0].image_url"
         />
     </div>
 </template>

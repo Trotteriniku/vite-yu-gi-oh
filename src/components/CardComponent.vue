@@ -1,11 +1,14 @@
-<template>
-    <div class="col-12 col-md-3 pb-4">
-        <figure>
-            <img :src="card_images" alt="name" class="name ">
-            <figcaption class="text-secondary">{{ name}}</figcaption>
-            <figcaption class="text-secondary">{{type }}</figcaption>
-            <figcaption class="text-secondary">{{ frameType }}</figcaption>
-            <figcaption class="text-secondary">{{ archetype}}</figcaption>
+<template> 
+    <div class="text-center">
+        <figure >
+            <img :src="card_images" alt="name" >
+            <div class="p-3 figcontainer rounded-bottom   " >
+                <figcaption class=" text-light text-uppercase fw-bold">{{ name}}</figcaption>
+                <figcaption class="  text-uppercase">{{type }}</figcaption>
+                <figcaption class="  text-uppercase">{{ frameType }}</figcaption>
+                <figcaption class="  text-uppercase">{{ archetype}}</figcaption>
+            </div>
+            
         </figure>
     </div>
 </template>
@@ -31,7 +34,13 @@ import { store } from '../data/store'
 </script>
 
 <style lang="scss" scoped>
-    
+    img{
+        width: 100%;
+    }
+    .figcontainer{
+        min-height: 150px;
+        background-color: orange;
+    }
 </style>
 
 
