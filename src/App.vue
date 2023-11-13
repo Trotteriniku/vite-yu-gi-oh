@@ -21,8 +21,8 @@ import CardsListComponent from './components/CardsListComponent.vue';
     methods:{
       getCards(){
         axios.get(store.apiUrl+store.endPoint.name).then((response) =>{
-        store.cardsList = response.data.results;
-        console.log(response);
+        store.cardsList = response.data.data;
+        console.log(data);
       })
       },
     created(){
