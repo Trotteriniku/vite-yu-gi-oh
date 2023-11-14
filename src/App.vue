@@ -1,4 +1,5 @@
 <template>
+  <LoadingComponent/>
   <HeaderComponent/>
   <main class="p-5">
     <div class="container bg-light p-5 rounded">
@@ -12,14 +13,17 @@ import axios from 'axios'
 import { store } from './data/store'
 import HeaderComponent from './components/HeaderComponent.vue';
 import CardsListComponent from './components/CardsListComponent.vue';
+import LoadingComponent from './components/LoadingComponent.vue';
   export default {
     name:'App',
     components:{
     HeaderComponent,
-    CardsListComponent
+    CardsListComponent,
+    LoadingComponent,
 },
     data(){
       return{
+        
         store
       }
     },
@@ -27,7 +31,11 @@ import CardsListComponent from './components/CardsListComponent.vue';
       getCards(){
         axios.get(store.apiUrl+store.endPoint.name).then((response) =>{
         store.cardsList = response.data.data;
-        console.log(data);
+        store.loading=false
+      }).catch((error)=>{
+        console.log(error);
+      }).finally(()=>{
+        // store.loading=false
       })
       }
     },
