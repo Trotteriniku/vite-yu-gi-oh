@@ -1,4 +1,5 @@
 <template>
+    <div class="p-3 bg-black text-light fw-bold rounded-top ">Found {{store.cardsList.length}} cards</div>
     <div class=" row row-cols-lg-5 row-cols-md-4 " >
         <CardComponent
         v-for="card in store.cardsList"

@@ -1,5 +1,5 @@
 <template>
-    <div v-if="store.loading" class="loadingscr">
+    <div class="loadingscr">
         <img src="../assets/images/yugioh_magic_circle_vector_by_carionto_dbdd767.png" alt="" class="spin">
     </div>
 </template>

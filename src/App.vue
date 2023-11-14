@@ -1,5 +1,5 @@
 <template>
-  <LoadingComponent/>
+  <LoadingComponent  v-if="store.loading"/>
   <HeaderComponent/>
   <main class="p-5">
     <div class="container bg-light p-5 rounded">
@@ -31,11 +31,11 @@ import LoadingComponent from './components/LoadingComponent.vue';
       getCards(){
         axios.get(store.apiUrl+store.endPoint.name).then((response) =>{
         store.cardsList = response.data.data;
-        store.loading=false
+        // store.loading=false
       }).catch((error)=>{
         console.log(error);
       }).finally(()=>{
-        // store.loading=false
+         store.loading=false
       })
       }
     },
