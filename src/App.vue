@@ -70,6 +70,11 @@ import SearchComponent from './components/SearchComponent.vue';
       this.getCards();
       this.getArchetypes();
       this.pippo()
+
+
+
+
+
     }
   }
 </script>

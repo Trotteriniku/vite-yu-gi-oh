@@ -1,10 +1,13 @@
 <template>
-    <div>
-        <select name="searchbar" id="searchbar" v-model="selectedArchetype" @change="pippo()">
-            <option value="">All</option>
-            <option v-for="archetype in store.archetypeList" :value="archetype">{{ archetype }}</option>
-        </select>
+    <div class="container">
+        <div class=" row row-cols-1">
+            <select name="searchbar" id="searchbar" v-model="selectedArchetype" @change="pippo()">
+                <option value="">All</option>
+                <option v-for="archetype in store.archetypeList" :value="archetype">{{ archetype }}</option>
+            </select>
+        </div>
     </div>
+    
 </template>
 
 <script>

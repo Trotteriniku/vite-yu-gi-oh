@@ -1,7 +1,28 @@
 @use './partials/variables' as *;
-@import 'bootstrap/scss/bootstrap'
+@import 'bootstrap/scss/bootstrap';
 
 
+
+
+ @media screen and (max-width: $small) {
+    header {
+        display: block !important; 
+    }
+    #headerlogo{
+        padding: 0 !important;
+        text-align: center;
+    }
+    #headertitle{
+        margin: 0 !important;
+        text-align: center;
+    }
+};
+
+@media screen and (min-width: $small) {
+    header{
+        display: flex;
+    }
+}
 
 
 
